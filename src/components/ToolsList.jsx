@@ -1,7 +1,7 @@
 import ImageUpload from "./ImageUpload";
 import ToolsButton from "./ToolsButton";
 
-const ToolsList = ({ setEffect, image, setImage }) => {
+const ToolsList = ({ setCurrentEffect, currentEffect, image, setImage }) => {
   const effectList = [
     "airbrush",
     "chalkboard",
@@ -30,7 +30,13 @@ const ToolsList = ({ setEffect, image, setImage }) => {
     <div className="flex flex-col overflow-auto">
       <ImageUpload setImage={setImage} image={image} />
       {effectList.map((effect, index) => (
-        <ToolsButton key={index} setEffect={setEffect} name={effect} />
+        <ToolsButton
+          currentEffect={currentEffect}
+          key={index}
+          effect={effect}
+          setCurrentEffect={setCurrentEffect}
+          name={effect}
+        />
       ))}
     </div>
   );

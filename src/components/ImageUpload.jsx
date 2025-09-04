@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const ImageUpload = ({ setImage, image }) => {
+const ImageUpload = ({ setImage }) => {
   const fileInputRef = useRef(null);
 
   const handleClick = () => {
