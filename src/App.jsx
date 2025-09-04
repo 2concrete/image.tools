@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import ImageUpload from "./components/ImageUpload";
 import ImageDisplay from "./components/ImageDisplay";
 import ToolsList from "./components/ToolsList";
 
@@ -15,9 +14,11 @@ const App = () => {
   }, [image]);
 
   return (
-    <div className="flex justify-center items-center h-screen font-[Source_code_pro]">
+    <div className="flex h-screen font-[Source_code_pro]">
       <ToolsList setEffect={setEffect} image={image} setImage={setImage} />
-      {image && <ImageDisplay image={image} effect={effect} />}
+      <div className="flex justify-center items-center w-full">
+        {image && <ImageDisplay image={image} effect={effect} />}
+      </div>
     </div>
   );
 };

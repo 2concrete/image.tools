@@ -27,7 +27,7 @@ const ToolsList = ({ setEffect, image, setImage }) => {
   ];
 
   return (
-    <div className="flex flex-col left-0 h-screen absolute overflow-auto">
+    <div className="flex flex-col overflow-auto">
       <ImageUpload setImage={setImage} image={image} />
       {effectList.map((effect, index) => (
         <ToolsButton key={index} setEffect={setEffect} name={effect} />
