@@ -29,11 +29,10 @@ const ToolsList = ({ setCurrentEffect, currentEffect, image, setImage }) => {
   return (
     <div className="flex flex-col overflow-auto">
       <ImageUpload setImage={setImage} image={image} />
-      {effectList.map((effect, index) => (
+      {effectList.map((effect) => (
         <ToolsButton
           currentEffect={currentEffect}
-          key={index}
-          effect={effect}
+          key={effect}
           setCurrentEffect={setCurrentEffect}
           name={effect}
         />

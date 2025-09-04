@@ -17,7 +17,7 @@ const App = () => {
     <div className="flex h-screen font-[Source_code_pro]">
       <ToolsList
         setCurrentEffect={setCurrentEffect}
-        curentEffect={currentEffect}
+        currentEffect={currentEffect}
         image={image}
         setImage={setImage}
       />
