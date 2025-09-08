@@ -31,6 +31,7 @@ const ToolsList = ({ setCurrentEffect, currentEffect, image, setImage }) => {
       <ImageUpload setImage={setImage} image={image} />
       {effectList.map((effect) => (
         <ToolsButton
+          image={image}
           currentEffect={currentEffect}
           key={effect}
           setCurrentEffect={setCurrentEffect}
